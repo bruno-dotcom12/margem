@@ -1,8 +1,5 @@
+import RaioXMargem from "@/components/raio-x/RaioXMargem";
+
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-4">
-      <h1 className="text-4xl font-bold">margem</h1>
-      <p className="text-gray-500">Esqueleto rodando.</p>
-    </main>
-  );
+  return <RaioXMargem />;
 }

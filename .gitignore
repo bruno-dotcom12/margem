@@ -30,3 +30,6 @@ next-env.d.ts
 .DS_Store
 *.pem
 /coverage
+
+# subpasta aninhada: repo git duplicado em estado antigo, não faz parte do projeto
+/margem/
