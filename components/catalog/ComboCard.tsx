@@ -18,7 +18,7 @@ export function ComboCard({ combo }: { combo: Combo }) {
           <IAChip key={ia.slug} icone={ia.icone} gradiente={ia.gradiente} tamanho={40} />
         ))}
         {ias.length > 4 && (
-          <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-xs font-mono">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-xs font-mono ring-1 ring-white/20">
             +{ias.length - 4}
           </span>
         )}
