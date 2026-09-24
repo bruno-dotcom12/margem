@@ -30,10 +30,10 @@ export function IAChip({ icone, gradiente, tamanho = 48 }: { icone: IconeSlug; g
   const Icone = ICONES[icone]
   return (
     <div
-      className={`flex items-center justify-center rounded-2xl bg-gradient-to-br ${gradiente}`}
+      className={`flex items-center justify-center rounded-[1.25rem] bg-gradient-to-br shadow-lg shadow-black/40 ring-1 ring-white/15 ${gradiente}`}
       style={{ width: tamanho, height: tamanho }}
     >
-      <Icone size={tamanho * 0.5} className="text-white" />
+      <Icone size={tamanho * 0.5} className="text-white" strokeWidth={2.25} />
     </div>
   )
 }

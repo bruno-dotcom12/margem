@@ -36,7 +36,7 @@ export function IACard({ ia }: { ia: IA }) {
             max={30}
             value={dias}
             onChange={(e) => setDias(Math.min(Math.max(Number(e.target.value), 1), 30))}
-            className="w-14 rounded border border-white/10 bg-transparent px-2 py-1 font-mono"
+            className="w-14 rounded-lg border border-white/10 bg-transparent px-2 py-1 font-mono"
           />
         </label>
       </div>

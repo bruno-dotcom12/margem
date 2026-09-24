@@ -48,7 +48,7 @@ export default function CheckoutPage() {
           <input
             value={nome}
             onChange={(e) => setNome(e.target.value)}
-            className="mt-1 w-full rounded-lg border border-white/15 bg-transparent px-3 py-2"
+            className="mt-1 w-full rounded-xl border border-white/15 bg-transparent px-3 py-2"
             placeholder="Seu nome"
           />
         </label>
@@ -58,7 +58,7 @@ export default function CheckoutPage() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 w-full rounded-lg border border-white/15 bg-transparent px-3 py-2"
+            className="mt-1 w-full rounded-xl border border-white/15 bg-transparent px-3 py-2"
             placeholder="voce@email.com"
           />
         </label>

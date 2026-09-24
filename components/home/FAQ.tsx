@@ -5,16 +5,20 @@ const PERGUNTAS = [
       'Pegamos o plano mensal oficial de cada IA, dividimos por 30 dias e aplicamos a margem da loja. O resultado é arredondado para o valor mais próximo terminado em ,90.',
   },
   {
-    pergunta: 'Isso é uma loja de verdade?',
-    resposta: 'Não. É um projeto acadêmico fictício, sem pagamento real e sem coleta de dados de cartão.',
-  },
-  {
     pergunta: 'Posso combinar mais de uma IA?',
     resposta: 'Sim. Os combos juntam IAs complementares com desconto sobre a soma das diárias.',
   },
   {
     pergunta: 'O que acontece depois dos dias contratados?',
     resposta: 'O acesso simulado expira na data mostrada na confirmação do pedido.',
+  },
+  {
+    pergunta: 'Dá pra trocar de IA no meio do período?',
+    resposta: 'Sim. Cada IA e cada combo têm sua própria contagem de dias, então você pode ir adicionando outras a qualquer momento.',
+  },
+  {
+    pergunta: 'Existe fidelidade ou renovação automática?',
+    resposta: 'Não. Cada pedido vale só pelos dias escolhidos. Quando acabar, o acesso simulado expira sozinho.',
   },
 ]
 

@@ -62,7 +62,7 @@ export function CartDrawer() {
                         max={30}
                         value={item.dias}
                         onChange={(e) => atualizarDias(item.tipo, item.slug, Number(e.target.value))}
-                        className="w-16 rounded border border-white/10 bg-transparent px-2 py-1 font-mono"
+                        className="w-16 rounded-lg border border-white/10 bg-transparent px-2 py-1 font-mono"
                       />
                     </label>
                     <PrecoMono>{formatBRL(precoDia * item.dias)}</PrecoMono>

@@ -5,6 +5,7 @@ import { CartProvider } from '@/lib/cart-context'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { CartDrawer } from '@/components/layout/CartDrawer'
+import { GlowCursorEffect } from '@/components/ui/GlowCursorEffect'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] })
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
           <Footer />
           <CartDrawer />
+          <GlowCursorEffect />
         </CartProvider>
       </body>
     </html>

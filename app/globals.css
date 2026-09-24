@@ -47,7 +47,7 @@ body {
   background: var(--glass);
   backdrop-filter: blur(14px);
   border: 1px solid var(--border);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   position: relative;
   transition: border-color 0.2s ease;
 }
