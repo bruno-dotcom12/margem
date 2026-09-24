@@ -1,1 +1,119 @@
 @import "tailwindcss";
+
+:root {
+  --bg: #07080c;
+  --fg: #e7e9ee;
+  --muted: #8b8fa3;
+  --border: rgba(255, 255, 255, 0.1);
+  --glass: rgba(255, 255, 255, 0.05);
+  --cyan: #22d3ee;
+  --violet: #a78bfa;
+  --lime: #a3e635;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center top;
+}
+
+.glow-cena {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-cena::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 60%;
+  background: radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--cyan) 25%, transparent), transparent 60%),
+    radial-gradient(circle at 80% 10%, color-mix(in srgb, var(--violet) 25%, transparent), transparent 60%),
+    radial-gradient(circle at 50% 60%, color-mix(in srgb, var(--lime) 15%, transparent), transparent 60%);
+  filter: blur(60px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.cartao-vidro {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.cartao-vidro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    220px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    color-mix(in srgb, var(--cyan) 70%, transparent),
+    transparent 70%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.cartao-vidro:hover::before {
+  opacity: 1;
+}
+
+.badge-terminal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: var(--font-geist-mono);
+  font-size: 0.75rem;
+  color: var(--lime);
+  border: 1px solid color-mix(in srgb, var(--lime) 40%, transparent);
+  border-radius: 9999px;
+  padding: 0.125rem 0.625rem;
+}
+
+.badge-terminal::before {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background: var(--lime);
+  box-shadow: 0 0 6px var(--lime);
+}
+
+.cursor-piscando::after {
+  content: "▌";
+  margin-left: 0.25rem;
+  animation: piscar 1s steps(1) infinite;
+}
+
+@keyframes piscar {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-piscando::after {
+    animation: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
